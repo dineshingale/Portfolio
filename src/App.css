@@ -1,0 +1,109 @@
+/* ========== Global Styles ==========
+   Tailwind handles most styling.
+   These are custom effects only.
+=================================== */
+
+/* ========== Neon Light Background Beams ========== */
+.light-beam-container {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Two blurred, animated gradient beams (left + right) */
+.light-beam-container::before,
+.light-beam-container::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  width: 50vw;                /* half of viewport width */
+  height: 50vh;               /* half of viewport height */
+  opacity: 0.3;
+  filter: blur(80px);
+  z-index: -1;                /* stay behind content */
+  animation: pulse-light 4s infinite alternate;
+}
+
+/* Left beam: pink-purple */
+.light-beam-container::before {
+  left: -50px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 255, 0.8) 0%,
+    transparent 70%
+  );
+  transform: rotate(-15deg);
+}
+
+/* Right beam: cyan */
+.light-beam-container::after {
+  right: -50px;
+  background: linear-gradient(
+    -135deg,
+    rgba(0, 255, 255, 0.8) 0%,
+    transparent 70%
+  );
+  transform: rotate(15deg);
+}
+
+/* Subtle fade-in/fade-out animation */
+/* Blob shape animation */
+@keyframes blob-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.animate-blob-spin {
+    animation: blob-spin 10s ease-in-out infinite;
+}
+
+
+/* ========== Glowing Text Effect ========== */
+.glow-heading {
+  text-shadow:
+    0 0 8px rgba(0, 255, 255, 0.6),
+    0 0 16px rgba(255, 0, 255, 0.6);
+}
+
+/* ========== Horizontal Scroll Section ========== */
+.scroll-snap-x {
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;  /* hide scrollbar on IE/Edge */
+  scrollbar-width: none;     /* hide scrollbar on Firefox */
+}
+.scroll-snap-x::-webkit-scrollbar {
+  display: none;             /* hide scrollbar on Chrome/Safari/Opera */
+}
+
+/* ========== Project Card Effects ========== */
+.project-card {
+  transform: scale(0.9);
+  opacity: 0.8;
+  box-shadow: none;
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+/* Active card: larger, fully visible, glowing */
+.project-card.active {
+  transform: scale(1);
+  opacity: 1;
+  box-shadow:
+    0 0 20px rgba(0, 255, 255, 0.8),
+    0 0 40px rgba(255, 0, 255, 0.6);
+}
