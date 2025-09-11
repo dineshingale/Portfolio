@@ -15,7 +15,7 @@ const Header = () => {
           Hello, I'm Dinesh Ingale, a Software developer
         </h1>
         <p className="text-lg sm:text-xl font-semibold text-gray-300 glow-heading">
-          And part time writer
+          And part time technical content writer
         </p>
         <p className="max-w-xl text-sm sm:text-base text-gray-400 mx-auto lg:mx-0 mb-4">
           I design and develop software. I have developed most of the projects around web application, mobile application, and SaaS.
