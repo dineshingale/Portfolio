@@ -43,7 +43,7 @@ const Projects = () => {
       videoId: "jNQXAC9IVRw",
       githubLink:"https://github.com/dineshingale", 
       vercelLink:"https://gaganyatri.vercel.app/", 
-      sd:"resume.pdf" 
+      sd:"GaganYatri User Manual and Software documentation.pdf" 
     },
     { title: "CloudKeep", 
       description: "Cloudkeep a SaaS platform designed for Secure multimedia file cloud storage. system enables secure file uploads, allowing users to store, preview, share, and download multimedia content with flexible access controls. provide responsive and grid structure for easy management.", 
