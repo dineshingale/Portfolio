@@ -2,5 +2,6 @@
 
 1. Sofware documentation for each project
 2. User manual for projects
+3. Development process in detail on YouTube
 
 ## link: https://dineshingale.vercel.app/
